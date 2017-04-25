@@ -1,0 +1,12 @@
+{
+  "name": "trusas-android",
+  "version": "0.0.1",
+  "description": "",
+  "files": ".",
+  "main": "index.js",
+  "scripts": {
+    "install": "pip install -r requirements.txt"
+  },
+  "author": "Jami Pekkanen <jami.pekkanen@gmail.com>",
+  "license": "AGPL-3.0"
+}
