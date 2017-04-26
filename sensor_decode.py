@@ -39,6 +39,9 @@ SENSOR_MAPPINGS = dict(
 def map_from_android(event):
 	# TODO: Due to hackery in sensors.py
 	#sensor_type = SENSOR_TYPES[event['sensor']['mType']]
+        if event['sensor_type'] not in SENSOR_TYPES:
+            return None
+
 	sensor_type = SENSOR_TYPES[event['sensor_type']]
 
 	if sensor_type not in SENSOR_MAPPINGS:
