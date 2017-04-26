@@ -72,7 +72,7 @@ class SocketLineReader(object):
 			self.buflist.append(data)
 
 
-def main(retries=10, retry_delay=0.5):
+def main(retries=10, retry_delay=1.0):
 	adb = lambda cmd, ADB=ADB: sh("%s %s"%(ADB, cmd))
 	adb("forward tcp:%i tcp:%i"%(SENSOR_PORT, SENSOR_PORT))
 	adb("install -r -g %s"%SERVER_APK)
